@@ -16,7 +16,7 @@
               v-model="shelterForm.name"
               type="text"
               required
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="e.g., Zagreb Animal Shelter"
             />
           </div>
@@ -27,7 +27,7 @@
               v-model="shelterForm.address"
               required
               rows="2"
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="e.g., Heinzelova ul. 55, 10000 Zagreb"
             ></textarea>
           </div>
@@ -39,7 +39,7 @@
                 v-model="shelterForm.phone"
                 type="tel"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 placeholder="+385 1 2345 678"
               />
             </div>
@@ -50,7 +50,7 @@
                 v-model="shelterForm.email"
                 type="email"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 placeholder="info@shelter.hr"
               />
             </div>
@@ -61,7 +61,7 @@
             <input
               v-model="shelterForm.workingHours"
               type="text"
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="e.g., Mon-Fri: 8:00-16:00, Sat: 8:00-12:00"
             />
           </div>
@@ -71,7 +71,7 @@
             <textarea
               v-model="shelterForm.description"
               rows="3"
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="Tell people about your shelter, mission, and how long you've been helping animals..."
             ></textarea>
           </div>
@@ -81,7 +81,7 @@
             <input
               v-model="shelterForm.website"
               type="url"
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="https://your-shelter-website.hr"
             />
           </div>
@@ -106,7 +106,7 @@
           <button 
             type="submit" 
             :disabled="isLoading"
-            class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            class="flex-1 bg-pink-600 text-white py-2 px-4 rounded-md hover:bg-pink-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {{ isLoading ? 'Saving...' : 'Update Shelter' }}
           </button>

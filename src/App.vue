@@ -169,12 +169,12 @@ onMounted(async () => {
 <template>
   <div id="app" class="min-h-screen bg-gray-50">
 
-    <header class="bg-blue-600 text-white shadow-lg">
+    <header class="bg-pink-600 text-white shadow-lg">
       <div class="max-w-7xl mx-auto px-4 py-6">
         <div class="flex items-center justify-between">
           <div>
             <h1 class="text-3xl font-bold">🐕 Croatian Pet Adoption</h1>
-            <p class="text-blue-100 mt-1">
+            <p class="text-pink-100 mt-1">
               {{ userRole === 'shelter' ? 'Shelter Management Platform' : 'Connecting shelters and families across Croatia' }}
             </p>
           </div>
@@ -183,13 +183,13 @@ onMounted(async () => {
             <template v-if="userRole !== 'shelter'">
               <button 
                 @click="currentView = 'home'"
-                :class="['px-4 py-2 rounded transition-colors', currentView === 'home' ? 'bg-blue-700' : 'hover:bg-blue-700']"
+                :class="['px-4 py-2 rounded transition-colors', currentView === 'home' ? 'bg-pink-700' : 'hover:bg-pink-700']"
               >
                 Find Dogs
               </button>
               <button 
                 @click="currentView = 'shelters'"
-                :class="['px-4 py-2 rounded transition-colors', currentView === 'shelters' ? 'bg-blue-700' : 'hover:bg-blue-700']"
+                :class="['px-4 py-2 rounded transition-colors', currentView === 'shelters' ? 'bg-pink-700' : 'hover:bg-pink-700']"
               >
                 Shelters
               </button>
@@ -197,21 +197,21 @@ onMounted(async () => {
             
 
             <div v-if="user" class="flex items-center space-x-4">
-              <span class="text-blue-100">
+              <span class="text-pink-100">
                 Hello, {{ user.displayName || user.email }}
-                <span v-if="userRole" class="text-xs bg-blue-500 px-2 py-1 rounded ml-2">
+                <span v-if="userRole" class="text-xs bg-pink-500 px-2 py-1 rounded ml-2">
                   {{ userRole === 'shelter' ? '🏢 Shelter' : '👤 Adopter' }}
                 </span>
               </span>
               <button 
                 @click="currentView = 'dashboard'"
-                :class="['px-4 py-2 rounded transition-colors', currentView === 'dashboard' ? 'bg-blue-700' : 'hover:bg-blue-700']"
+                :class="['px-4 py-2 rounded transition-colors', currentView === 'dashboard' ? 'bg-pink-700' : 'hover:bg-pink-700']"
               >
                 {{ userRole === 'shelter' ? 'Manage Shelter' : 'Dashboard' }}
               </button>
               <button 
                 @click="handleLogout"
-                class="px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                class="px-4 py-2 rounded hover:bg-pink-700 transition-colors"
               >
                 Logout
               </button>
@@ -219,7 +219,7 @@ onMounted(async () => {
             <div v-else class="flex space-x-2">
               <button 
                 @click="showLoginModal = true"
-                class="px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                class="px-4 py-2 rounded hover:bg-pink-700 transition-colors"
               >
                 Login
               </button>
@@ -238,7 +238,7 @@ onMounted(async () => {
     <main class="max-w-7xl mx-auto px-4 py-8">
 
       <div v-if="isLoading || (dogsLoading && userRole !== 'shelter')" class="flex justify-center py-12">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600"></div>
       </div>
 
 
@@ -261,7 +261,7 @@ onMounted(async () => {
                   v-model="searchTerm"
                   type="text"
                   placeholder="Search by dog name or breed..."
-                  class="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  class="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -348,7 +348,7 @@ onMounted(async () => {
                 <p class="text-gray-500 text-lg">No dogs match your current filters.</p>
                 <button 
                   @click="clearFilters"
-                  class="mt-4 text-blue-600 hover:text-blue-800"
+                  class="mt-4 text-pink-600 hover:text-pink-800"
                 >
                   Clear all filters
                 </button>

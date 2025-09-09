@@ -21,7 +21,7 @@
                 v-model="dogForm.name"
                 type="text"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 placeholder="Enter dog's name"
               />
             </div>
@@ -35,7 +35,7 @@
                 max="20"
                 step="0.5"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 placeholder="Enter age"
               />
             </div>
@@ -46,7 +46,7 @@
                 v-model="dogForm.breed"
                 type="text"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 placeholder="Enter breed"
               />
             </div>
@@ -56,7 +56,7 @@
               <select
                 v-model="dogForm.size"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Select size</option>
                 <option value="Small">Small</option>
@@ -69,7 +69,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">Gender</label>
               <select
                 v-model="dogForm.gender"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Select gender</option>
                 <option value="Male">Male</option>
@@ -82,7 +82,7 @@
               <input
                 v-model="dogForm.color"
                 type="text"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 placeholder="Enter color/markings"
               />
             </div>
@@ -95,7 +95,7 @@
               v-model="dogForm.description"
               rows="4"
               required
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="Tell people about this dog's personality, behavior, special needs, etc."
             ></textarea>
           </div>
@@ -107,7 +107,7 @@
               <select
                 v-model="dogForm.healthStatus"
                 required
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Select health status</option>
                 <option value="Excellent">Excellent</option>
@@ -121,7 +121,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">Vaccination Status</label>
               <select
                 v-model="dogForm.vaccinationStatus"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Select vaccination status</option>
                 <option value="Up to date">Up to date</option>
@@ -135,7 +135,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">Spayed/Neutered</label>
               <select
                 v-model="dogForm.spayedNeutered"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Select status</option>
                 <option value="Yes">Yes</option>
@@ -148,7 +148,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">Good with Kids</label>
               <select
                 v-model="dogForm.goodWithKids"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Unknown</option>
                 <option value="Yes">Yes</option>
@@ -161,7 +161,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">Good with Other Dogs</label>
               <select
                 v-model="dogForm.goodWithDogs"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Unknown</option>
                 <option value="Yes">Yes</option>
@@ -174,7 +174,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-2">Good with Cats</label>
               <select
                 v-model="dogForm.goodWithCats"
-                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               >
                 <option value="">Unknown</option>
                 <option value="Yes">Yes</option>
@@ -199,7 +199,7 @@
             <select
               v-model="dogForm.location"
               required
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
             >
               <option value="">Select location</option>
               <option value="Zagreb">Zagreb</option>
@@ -221,7 +221,7 @@
             <textarea
               v-model="dogForm.specialNotes"
               rows="3"
-              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
               placeholder="Any special requirements, medical needs, or other important information..."
             ></textarea>
           </div>
@@ -247,7 +247,7 @@
             <button 
               type="submit" 
               :disabled="isSubmitting"
-              class="flex-1 bg-blue-600 text-white py-3 px-4 rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              class="flex-1 bg-pink-600 text-white py-3 px-4 rounded hover:bg-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {{ isSubmitting ? 'Saving...' : (isEditing ? 'Update Dog' : 'Add Dog') }}
             </button>

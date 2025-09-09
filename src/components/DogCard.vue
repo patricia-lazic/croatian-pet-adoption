@@ -35,7 +35,7 @@
       
       <button 
         @click="contactShelter"
-        class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+        class="w-full bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 transition-colors"
       >
         Contact Shelter
       </button>

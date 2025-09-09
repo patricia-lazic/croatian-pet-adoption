@@ -31,7 +31,7 @@
             v-model="contactForm.name"
             type="text"
             required
-            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
             :placeholder="user?.displayName || 'Your full name'"
           />
         </div>
@@ -42,7 +42,7 @@
             v-model="contactForm.email"
             type="email"
             required
-            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
             :placeholder="user?.email || 'your.email@example.com'"
           />
         </div>
@@ -52,7 +52,7 @@
           <input
             v-model="contactForm.phone"
             type="tel"
-            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
             placeholder="+385 XX XXX XXXX"
           />
         </div>
@@ -61,7 +61,7 @@
           <label class="block text-sm font-medium text-gray-700 mb-2">Interest Level</label>
           <select
             v-model="contactForm.interestLevel"
-            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
           >
             <option value="interested">Interested in learning more</option>
             <option value="serious">Seriously considering adoption</option>
@@ -76,7 +76,7 @@
             v-model="contactForm.message"
             required
             rows="4"
-            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
             placeholder="Tell the shelter about yourself, your living situation, experience with pets, and why you're interested in this dog..."
           ></textarea>
           <p class="text-xs text-gray-500 mt-1">
@@ -103,15 +103,15 @@
           <button 
             type="submit" 
             :disabled="isLoading"
-            class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            class="flex-1 bg-pink-600 text-white py-2 px-4 rounded-md hover:bg-pink-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {{ isLoading ? 'Sending...' : 'Send Inquiry' }}
           </button>
         </div>
       </form>
 
-      <div class="mt-4 p-4 bg-blue-50 rounded-lg">
-        <p class="text-sm text-blue-800">
+      <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+        <p class="text-sm text-pink-800">
           <strong>What happens next?</strong><br>
           Your inquiry will be sent directly to {{ dog?.shelter }}. They typically respond within 24-48 hours. 
           You can check your dashboard for updates on your inquiries.

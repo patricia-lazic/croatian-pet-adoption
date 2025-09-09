@@ -20,9 +20,9 @@
 
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-      <div class="bg-blue-50 rounded-lg p-6 text-center">
-        <h4 class="text-lg font-semibold text-blue-800">Inquiries Sent</h4>
-        <p class="text-3xl font-bold text-blue-600">{{ userInquiries.length }}</p>
+      <div class="bg-pink-50 rounded-lg p-6 text-center">
+        <h4 class="text-lg font-semibold text-pink-800">Inquiries Sent</h4>
+        <p class="text-3xl font-bold text-pink-600">{{ userInquiries.length }}</p>
       </div>
       <div class="bg-green-50 rounded-lg p-6 text-center">
         <h4 class="text-lg font-semibold text-green-800">Favorite Dogs</h4>
@@ -37,7 +37,7 @@
         <h3 class="text-xl font-semibold text-gray-800">Your Inquiries</h3>
         <button 
           @click="loadUserInquiries" 
-          class="text-blue-600 hover:text-blue-800 text-sm"
+          class="text-pink-600 hover:text-pink-800 text-sm"
           :disabled="isLoadingInquiries"
         >
           {{ isLoadingInquiries ? 'Refreshing...' : '🔄 Refresh' }}
@@ -46,7 +46,7 @@
       
 
       <div v-if="isLoadingInquiries" class="text-center py-8">
-        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600 mx-auto"></div>
         <p class="text-gray-500 mt-2">Loading your inquiries...</p>
       </div>
 
@@ -55,7 +55,7 @@
         <div 
           v-for="inquiry in userInquiries" 
           :key="inquiry.id"
-          class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg"
+          class="border-l-4 border-pink-500 bg-pink-50 p-4 rounded-r-lg"
         >
           <div class="flex justify-between items-start">
             <div>
@@ -78,7 +78,7 @@
                 'text-xs px-2 py-1 rounded',
                 inquiry.status === 'pending' ? 'bg-yellow-200 text-yellow-800' :
                 inquiry.status === 'replied' ? 'bg-green-200 text-green-800' :
-                inquiry.status === 'approved' ? 'bg-blue-200 text-blue-800' :
+                inquiry.status === 'approved' ? 'bg-pink-200 text-pink-800' :
                 inquiry.status === 'declined' ? 'bg-red-200 text-red-800' :
                 'bg-gray-200 text-gray-800'
               ]">
@@ -104,7 +104,7 @@
         </p>
         <button 
           @click="goToDogs"
-          class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+          class="bg-pink-600 text-white px-6 py-2 rounded-md hover:bg-pink-700 transition-colors"
         >
           Browse Dogs
         </button>

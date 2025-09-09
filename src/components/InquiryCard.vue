@@ -34,10 +34,10 @@
     </div>
 
 
-    <div v-if="inquiry.response" class="bg-blue-50 rounded-lg p-4 mb-4 border-l-4 border-blue-400">
-      <h4 class="font-medium text-blue-800 mb-2">Your Response:</h4>
-      <p class="text-blue-700 text-sm leading-relaxed">{{ inquiry.response }}</p>
-      <p class="text-xs text-blue-600 mt-2">
+    <div v-if="inquiry.response" class="bg-pink-50 rounded-lg p-4 mb-4 border-l-4 border-pink-400">
+      <h4 class="font-medium text-pink-800 mb-2">Your Response:</h4>
+      <p class="text-pink-700 text-sm leading-relaxed">{{ inquiry.response }}</p>
+      <p class="text-xs text-pink-600 mt-2">
         Replied on {{ formatDate(inquiry.respondedAt || inquiry.updatedAt) }}
       </p>
     </div>
@@ -50,7 +50,7 @@
         <textarea
           v-model="replyMessage"
           rows="4"
-          class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
           placeholder="Write your response to the adopter..."
         ></textarea>
         
@@ -86,7 +86,7 @@
       <button
         v-if="inquiry.status === 'pending'"
         @click="showReplyForm = true"
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+        class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition-colors"
       >
         Reply to Inquiry
       </button>
@@ -219,7 +219,7 @@ const getStatusClass = (status) => {
     case 'declined':
       return 'bg-red-100 text-red-800'
     case 'replied':
-      return 'bg-blue-100 text-blue-800'
+      return 'bg-pink-100 text-pink-800'
     default:
       return 'bg-gray-100 text-gray-800'
   }
@@ -234,7 +234,7 @@ const getStatusBorderClass = (status) => {
     case 'declined':
       return 'border-red-400'
     case 'replied':
-      return 'border-blue-400'
+      return 'border-pink-400'
     default:
       return 'border-gray-400'
   }

@@ -18,7 +18,7 @@
         </div>
         <button 
           @click="showEditShelter = true"
-          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+          class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition-colors"
         >
           Edit Shelter Info
         </button>
@@ -33,7 +33,7 @@
           :class="[
             'py-2 px-1 border-b-2 font-medium text-sm',
             currentTab === 'overview' 
-              ? 'border-blue-500 text-blue-600' 
+              ? 'border-pink-500 text-pink-600' 
               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
           ]"
         >
@@ -44,7 +44,7 @@
           :class="[
             'py-2 px-1 border-b-2 font-medium text-sm',
             currentTab === 'dogs' 
-              ? 'border-blue-500 text-blue-600' 
+              ? 'border-pink-500 text-pink-600' 
               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
           ]"
         >
@@ -55,7 +55,7 @@
           :class="[
             'py-2 px-1 border-b-2 font-medium text-sm relative',
             currentTab === 'inquiries' 
-              ? 'border-blue-500 text-blue-600' 
+              ? 'border-pink-500 text-pink-600' 
               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
           ]"
         >
@@ -76,9 +76,9 @@
           <h4 class="text-lg font-semibold text-green-800">Available Dogs</h4>
           <p class="text-3xl font-bold text-green-600">{{ availableDogs.length }}</p>
         </div>
-        <div class="bg-blue-50 rounded-lg p-6 text-center">
-          <h4 class="text-lg font-semibold text-blue-800">Total Inquiries</h4>
-          <p class="text-3xl font-bold text-blue-600">{{ inquiryStats.total }}</p>
+        <div class="bg-pink-50 rounded-lg p-6 text-center">
+          <h4 class="text-lg font-semibold text-pink-800">Total Inquiries</h4>
+          <p class="text-3xl font-bold text-pink-600">{{ inquiryStats.total }}</p>
         </div>
         <div class="bg-yellow-50 rounded-lg p-6 text-center">
           <h4 class="text-lg font-semibold text-yellow-800">Pending</h4>
@@ -95,7 +95,7 @@
         <h3 class="text-xl font-semibold text-gray-800 mb-4">Recent Inquiries</h3>
         
         <div v-if="isLoadingInquiries" class="text-center py-8">
-          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600 mx-auto"></div>
           <p class="text-gray-500 mt-2">Loading inquiries...</p>
         </div>
 
@@ -107,7 +107,7 @@
             :class="{
               'border-yellow-500 bg-yellow-50': inquiry.status === 'pending',
               'border-green-500 bg-green-50': inquiry.status === 'approved',
-              'border-blue-500 bg-blue-50': inquiry.status === 'replied'
+              'border-pink-500 bg-pink-50': inquiry.status === 'replied'
             }"
           >
             <div class="flex justify-between items-start">
@@ -123,7 +123,7 @@
                       :class="{
                         'bg-yellow-200 text-yellow-800': inquiry.status === 'pending',
                         'bg-green-200 text-green-800': inquiry.status === 'approved',
-                        'bg-blue-200 text-blue-800': inquiry.status === 'replied'
+                        'bg-pink-200 text-pink-800': inquiry.status === 'replied'
                       }">
                   {{ inquiry.status }}
                 </span>
@@ -134,7 +134,7 @@
           <div class="text-center pt-4">
             <button 
               @click="currentTab = 'inquiries'"
-              class="text-blue-600 hover:text-blue-800 text-sm"
+              class="text-pink-600 hover:text-pink-800 text-sm"
             >
               View All Inquiries →
             </button>
@@ -178,7 +178,7 @@
             <div class="flex space-x-2">
               <button 
                 @click="editDog(dog)"
-                class="flex-1 bg-blue-500 text-white py-1 px-2 rounded text-sm hover:bg-blue-600"
+                class="flex-1 bg-pink-500 text-white py-1 px-2 rounded text-sm hover:bg-pink-600"
               >
                 Edit
               </button>
@@ -211,7 +211,7 @@
           <h3 class="text-xl font-semibold text-gray-800">Adoption Inquiries</h3>
           <button 
             @click="loadInquiries"
-            class="text-blue-600 hover:text-blue-800 text-sm"
+            class="text-pink-600 hover:text-pink-800 text-sm"
             :disabled="isLoadingInquiries"
           >
             {{ isLoadingInquiries ? 'Refreshing...' : '🔄 Refresh' }}
@@ -240,7 +240,7 @@
 
 
         <div v-if="isLoadingInquiries" class="text-center py-8">
-          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600 mx-auto"></div>
           <p class="text-gray-500 mt-2">Loading inquiries...</p>
         </div>
 

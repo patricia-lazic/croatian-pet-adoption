@@ -34,7 +34,7 @@
       <div class="flex space-x-2">
         <button 
           @click="viewDog"
-          class="flex-1 bg-blue-600 text-white py-2 px-3 text-sm rounded hover:bg-blue-700 transition-colors"
+          class="flex-1 bg-pink-600 text-white py-2 px-3 text-sm rounded hover:bg-pink-700 transition-colors"
         >
           View Details
         </button>

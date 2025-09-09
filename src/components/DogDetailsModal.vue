@@ -95,13 +95,13 @@
           </div>
 
 
-          <div class="bg-blue-50 rounded-lg p-4">
-            <h3 class="font-semibold text-lg text-blue-800 mb-3">Shelter Information</h3>
+          <div class="bg-pink-50 rounded-lg p-4">
+            <h3 class="font-semibold text-lg text-pink-800 mb-3">Shelter Information</h3>
             <div class="space-y-2">
-              <p class="text-blue-700">
+              <p class="text-pink-700">
                 <strong>Shelter:</strong> {{ dog.shelter || 'Unknown Shelter' }}
               </p>
-              <p class="text-blue-700">
+              <p class="text-pink-700">
                 <strong>Location:</strong> {{ dog.location || 'Not specified' }}
               </p>
             </div>
@@ -111,7 +111,7 @@
           <div class="flex space-x-4 pt-4 border-t">
             <button 
               @click="contactShelter"
-              class="flex-1 bg-blue-600 text-white py-3 px-4 rounded hover:bg-blue-700 transition-colors"
+              class="flex-1 bg-pink-600 text-white py-3 px-4 rounded hover:bg-pink-700 transition-colors"
             >
               Contact Shelter About {{ dog.name }}
             </button>

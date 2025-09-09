@@ -17,7 +17,7 @@
         :class="[
           'px-4 py-2 rounded-md text-sm font-medium',
           uploadMethod === 'file'
-            ? 'bg-blue-600 text-white'
+            ? 'bg-pink-600 text-white'
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
         ]"
       >
@@ -29,7 +29,7 @@
         :class="[
           'px-4 py-2 rounded-md text-sm font-medium',
           uploadMethod === 'url'
-            ? 'bg-blue-600 text-white'
+            ? 'bg-pink-600 text-white'
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
         ]"
       >
@@ -56,7 +56,7 @@
             <button
               type="button"
               @click="$refs.fileInput.click()"
-              class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+              class="bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition-colors"
             >
               Choose Image
             </button>
@@ -90,7 +90,7 @@
           <div v-if="selectedFiles[0].uploading" class="mt-2">
             <div class="bg-gray-200 rounded-full h-2">
               <div
-                class="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                class="bg-pink-600 h-2 rounded-full transition-all duration-300"
                 :style="{ width: selectedFiles[0].progress + '%' }"
               ></div>
             </div>
@@ -131,7 +131,7 @@
           @input="updateSingleUrl($event.target.value)"
           type="url"
           placeholder="Enter image URL"
-          class="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent"
         />
         <button
           v-if="singleUrl"
