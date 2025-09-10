@@ -61,11 +61,28 @@ export function useShelters() {
 
   const updateShelter = async (shelterId, shelterData) => {
     try {
-      await updateDoc(doc(db, "shelters", shelterId), {
+      const shelterRef = doc(db, "shelters", shelterId);
+
+      const shelterDoc = await getDoc(shelterRef);
+
+      const updateData = {
         ...shelterData,
         updatedAt: new Date(),
-      });
+      };
+
+      if (shelterDoc.exists()) {
+        await updateDoc(shelterRef, updateData);
+      } else {
+        await setDoc(shelterRef, {
+          ...updateData,
+          id: shelterId,
+          createdAt: new Date(),
+        });
+      }
+
+      return true;
     } catch (error) {
+      console.error("Error updating shelter:", error);
       throw error;
     }
   };
