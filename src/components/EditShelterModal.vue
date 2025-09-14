@@ -184,7 +184,6 @@ const emit = defineEmits(["close", "success"]);
 
 const { updateShelter } = useShelters();
 
-// Form data with location field
 const shelterForm = ref({
   name: "",
   address: "",
@@ -200,7 +199,6 @@ const isLoading = ref(false);
 const error = ref("");
 const success = ref("");
 
-// Watch for shelter data and populate form
 watch(
   () => props.shelter,
   (newShelter) => {
@@ -220,7 +218,6 @@ watch(
   { immediate: true }
 );
 
-// Form validation
 const validateForm = () => {
   if (!shelterForm.value.name.trim()) {
     error.value = "Shelter name is required";
@@ -245,7 +242,6 @@ const validateForm = () => {
   return true;
 };
 
-// Handle form submission
 const handleSubmit = async () => {
   if (!validateForm()) return;
 
@@ -274,7 +270,6 @@ const handleSubmit = async () => {
       emit("success");
     }, 1500);
   } catch (err) {
-    console.error("Error in handleSubmit:", err);
     error.value = `Failed to update shelter information: ${
       err.message || "Please try again."
     }`;

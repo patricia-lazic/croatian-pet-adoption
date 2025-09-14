@@ -217,10 +217,8 @@ const props = defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
-// Initialize auth at component level
 const { user } = useAuth();
 
-// Component state
 const uploadMethod = ref("file");
 const selectedFiles = ref([]);
 const singleUrl = ref("");
@@ -332,10 +330,7 @@ const removeFile = () => {
 };
 
 const uploadFiles = async () => {
-  console.log("Upload attempt - User:", user.value); // Debug log
-
   if (!user.value) {
-    console.error("No user found during upload attempt"); // Debug log
     error.value = "You must be logged in to upload images";
     return;
   }
@@ -350,14 +345,10 @@ const uploadFiles = async () => {
   fileObj.error = null;
 
   try {
-    console.log("Starting upload for user:", user.value.uid); // Debug log
-
     const timestamp = Date.now();
     const sanitizedFilename = fileObj.file.name.replace(/[^a-zA-Z0-9.-]/g, "_");
     const filename = `dogs/${user.value.uid}/${timestamp}_${sanitizedFilename}`;
     const imageRef = storageRef(storage, filename);
-
-    console.log("Upload path:", filename); // Debug log
 
     const metadata = {
       contentType: fileObj.file.type,
@@ -370,8 +361,6 @@ const uploadFiles = async () => {
     const snapshot = await uploadBytes(imageRef, fileObj.file, metadata);
     const downloadURL = await getDownloadURL(snapshot.ref);
 
-    console.log("Upload successful:", downloadURL); // Debug log
-
     fileObj.uploaded = true;
     fileObj.uploading = false;
     fileObj.progress = 100;
@@ -382,8 +371,6 @@ const uploadFiles = async () => {
       success.value = "";
     }, 3000);
   } catch (err) {
-    console.error("Upload error:", err); // Debug log
-
     fileObj.error = err.message;
     fileObj.uploading = false;
 

@@ -440,13 +440,10 @@ const handleSubmit = async () => {
       ...dogForm.value,
       shelterId: props.shelterId,
       shelter: props.shelterName,
-      // Set primary image from imageUrls array
       image: dogForm.value.imageUrls[0] || "",
-      // Keep the imageUrls array
       imageUrls: dogForm.value.imageUrls,
     };
 
-    // Add adoption timestamp if marking as adopted
     if (isEditing.value && dogForm.value.isAdopted && !props.dog.isAdopted) {
       dogData.adoptedAt = new Date();
     }

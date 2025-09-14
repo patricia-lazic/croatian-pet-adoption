@@ -82,7 +82,6 @@ export function useShelters() {
 
       return true;
     } catch (error) {
-      console.error("Error updating shelter:", error);
       throw error;
     }
   };
